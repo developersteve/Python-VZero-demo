@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+{% block content %}
+
+    <div class='container'>
+
+      <div class="col-md-offset-1 col-md-5 col-xs-12 col-sm-6">
+        <img src='/public/img/paymeh.jpg' class='img-responsive center'>
+      </div>
+
+      <form class='col-md-5 col-xs-12 col-sm-6' action='/proc' method='post'>
+
+        <div class="row">
+          <div class="input-group input-group-lg">
+            <input type="text" class="form-control" id="amount" name="amount" aria-describedby="sizing-addon1">
+            <span class="input-group-addon" id="sizing-addon1">Amount</span>
+          </div>
+        </div>
+
+        <div class="row">
+          <div id='checkout'>
+
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="input-group col-md-6">
+            <input type='submit' value='Submit Payment' class='btn btn-danger btn-lg'>
+          </div>
+        </div>
+
+      </form>
+    </div>
+
+    <script charset='utf-8'>
+      braintree.setup("{{ token }}", 'dropin', {
+        container: 'checkout'
+      });
+    </script>
+
+{% endblock %}
+
