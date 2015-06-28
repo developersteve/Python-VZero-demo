@@ -1,6 +1,6 @@
 # V.Zero Python demo using Flask 
 
-This is a reall basic example of the Braintree Dropin JS Client Library in Flash to make a Credit Card or PayPal payment.
+This is a reall basic example of the Braintree Dropin JS Client Library in Flask to make a Credit Card or PayPal payment.
 
 ## Technology
 
